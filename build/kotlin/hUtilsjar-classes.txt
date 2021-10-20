@@ -1,0 +1,1 @@
+C:\Users\speed\IdeaProjects\hUtils\build\classes\kotlin\main\me\henrique\utils\Utils.class;C:\Users\speed\IdeaProjects\hUtils\build\classes\kotlin\main\me\henrique\utils\UtilsKt.class;C:\Users\speed\IdeaProjects\hUtils\build\classes\kotlin\main\me\henrique\utils\commands\UtilCommand.class

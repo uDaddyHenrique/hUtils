@@ -1,0 +1,6 @@
+name: hUtils
+version: 1.0
+main: me.henrique.utils.Utils
+commands:
+  util:
+    description: Command exemple
