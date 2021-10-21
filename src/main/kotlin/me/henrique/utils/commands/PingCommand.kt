@@ -13,13 +13,13 @@ class PingCommand : CommandExecutor {
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
         if(sender is Player){
             var p : Player = sender;
-            var target : Player = Bukkit.getPlayer(args[0])
             val pingP = (p as CraftPlayer).handle.ping.toDouble()
-            val pingT = (target as CraftPlayer).handle.ping.toDouble()
             if(args.size == 0){
                 p.sendMessage("§aSeu ping é §b: " + pingP)
             }
             if(args.size == 1){
+                var target : Player = Bukkit.getPlayer(args[0])
+                val pingT = (target as CraftPlayer).handle.ping.toDouble()
                 if(target == null){
                     p.sendMessage("§cEste jogador não está online.")
                 }else{

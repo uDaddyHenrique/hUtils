@@ -1,17 +1,16 @@
 package me.henrique.utils
 
 import me.henrique.utils.commands.*
+import me.henrique.utils.listeners.PlayerJoinListener
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
 
 class Utils : JavaPlugin() {
 
+
     override fun onEnable() {
-        getCommand("gm").executor = GamemodeCommand()
-        getCommand("online").executor = OnlineCommand()
-        getCommand("ping").executor = PingCommand()
-        getCommand("day").executor = DayCommand()
-        getCommand("night").executor = NightCommand()
+        makeCommands()
+        makeListeners()
         Bukkit.getConsoleSender().sendMessage("§aPlugin ligado.")
         super.onEnable()
     }
@@ -19,6 +18,17 @@ class Utils : JavaPlugin() {
     override fun onDisable() {
         Bukkit.getConsoleSender().sendMessage("§cPlugin desligado.")
         super.onDisable()
+    }
+    fun makeCommands(){
+        getCommand("gm").executor = GamemodeCommand()
+        getCommand("online").executor = OnlineCommand()
+        getCommand("ping").executor = PingCommand()
+        getCommand("day").executor = DayCommand()
+        getCommand("night").executor = NightCommand()
+    }
+    fun makeListeners(){
+        var pm = Bukkit.getPluginManager()
+        pm.registerEvents(PlayerJoinListener(), this)
     }
 }
 
