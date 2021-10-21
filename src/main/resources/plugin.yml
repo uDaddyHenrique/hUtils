@@ -7,3 +7,5 @@ commands:
   ping:
   day:
   night:
+  setspawn:
+  spawn:

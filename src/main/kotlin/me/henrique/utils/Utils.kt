@@ -25,6 +25,8 @@ class Utils : JavaPlugin() {
         getCommand("ping").executor = PingCommand()
         getCommand("day").executor = DayCommand()
         getCommand("night").executor = NightCommand()
+        getCommand("setspawn").executor = SetSpawnCommand()
+        getCommand("spawn").executor = SpawnCommand()
     }
     fun makeListeners(){
         var pm = Bukkit.getPluginManager()
