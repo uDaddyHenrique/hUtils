@@ -1,13 +1,15 @@
 package me.henrique.utils
 
-import me.henrique.utils.commands.UtilCommand
+import me.henrique.utils.commands.GamemodeCommand
+import me.henrique.utils.commands.OnlineCommand
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
 
 class Utils : JavaPlugin() {
 
     override fun onEnable() {
-        getCommand("util").setExecutor(UtilCommand())
+        getCommand("gm").executor = GamemodeCommand()
+        getCommand("online").executor = OnlineCommand()
         Bukkit.getConsoleSender().sendMessage("§aPlugin ligado.")
         super.onEnable()
     }
