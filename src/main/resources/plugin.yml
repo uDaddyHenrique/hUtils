@@ -4,3 +4,4 @@ main: me.henrique.utils.Utils
 commands:
   gm:
   online:
+  ping:
