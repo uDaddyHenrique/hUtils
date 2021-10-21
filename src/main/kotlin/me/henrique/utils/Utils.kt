@@ -1,8 +1,6 @@
 package me.henrique.utils
 
-import me.henrique.utils.commands.GamemodeCommand
-import me.henrique.utils.commands.OnlineCommand
-import me.henrique.utils.commands.PingCommand
+import me.henrique.utils.commands.*
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
 
@@ -12,6 +10,8 @@ class Utils : JavaPlugin() {
         getCommand("gm").executor = GamemodeCommand()
         getCommand("online").executor = OnlineCommand()
         getCommand("ping").executor = PingCommand()
+        getCommand("day").executor = DayCommand()
+        getCommand("night").executor = NightCommand()
         Bukkit.getConsoleSender().sendMessage("§aPlugin ligado.")
         super.onEnable()
     }
