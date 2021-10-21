@@ -14,7 +14,7 @@ class DayCommand : CommandExecutor {
                 p.sendMessage("§cVocê não tem permissão para executar este comando")
             } else {
                 if(args.isEmpty()){
-                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "time set day")
+                    p.world.time = 0
                     p.sendMessage("§aVocê atualizou o tempo para dia.")
                 }
             }

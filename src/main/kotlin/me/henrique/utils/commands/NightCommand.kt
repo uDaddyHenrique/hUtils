@@ -14,7 +14,7 @@ class NightCommand : CommandExecutor {
                 p.sendMessage("§cVocê não tem permissão para executor este comando.")
             }else{
                 if(args.isEmpty()){
-                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "time set night")
+                    p.world.time = 13000
                     p.sendMessage("§aVocê setou o tempo para noite.")
                 }
             }
